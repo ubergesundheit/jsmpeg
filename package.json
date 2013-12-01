@@ -1,0 +1,21 @@
+{
+  "name": "jsmpeg",
+  "version": "0.0.0",
+  "description": "jsmpeg",
+  "main": "jsmpg.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ubergesundheit/jsmpeg.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/ubergesundheit/jsmpeg/issues"
+  },
+  "dependencies": {
+    "ws": "~0.4.31"
+  }
+}
