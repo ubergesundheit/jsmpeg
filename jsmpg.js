@@ -42,8 +42,10 @@ var jsmpeg = window.jsmpeg = function( url, opts ) {
 
 	// use WebGL if possible (much faster)
 	if (this.initWebGL()) {
+		console.log('webgl');
 		this.renderFrame = this.renderFrameGL;
 	} else {
+		console.log('canvas2d');
 		this.canvasContext = this.canvas.getContext('2d');
 		this.renderFrame = this.renderFrame2D;
 	}
@@ -117,7 +119,7 @@ jsmpeg.prototype.compileShader = function(type, source) {
 jsmpeg.prototype.initWebGL = function() {
 	// attempt to get a webgl context
 	try {
-		var gl = this.gl = this.canvas.getContext('experimental-webgl');
+		var gl = this.gl = canvas.getContext('webgl') || this.canvas.getContext('experimental-webgl');
 	} catch (e) {
 		return false;
 	}
