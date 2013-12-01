@@ -42,10 +42,8 @@ var jsmpeg = window.jsmpeg = function( url, opts ) {
 
 	// use WebGL if possible (much faster)
 	if (this.initWebGL()) {
-		console.log('webgl');
 		this.renderFrame = this.renderFrameGL;
 	} else {
-		console.log('canvas2d');
 		this.canvasContext = this.canvas.getContext('2d');
 		this.renderFrame = this.renderFrame2D;
 	}
